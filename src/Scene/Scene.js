@@ -1,22 +1,35 @@
 import Spline from '@splinetool/react-spline';
-import { Col, Container, Row } from 'react-bootstrap';
+import styled from 'styled-components'
 
-export default function scene() {
-
-    const divStyle = {
-        width: '100%',
-        height: '800px',
-    };
-
-    function buttonClick(){
-        
-    }
+export default function Scene() {
 
     return (
-        <div style={divStyle}>
-           <button onClick={ () =>{window.location.href='https://my.spline.design/landing-a09fd1944355732eecc060d80b083b9e/'}}>?</button> 
-            <Spline scene="https://prod.spline.design/oUlczkNHSS-gc1F2/scene.splinecode" />
-        </div>
+        <Wrapper>
+            <Spline  className='spline' scene="https://prod.spline.design/oUlczkNHSS-gc1F2/scene.splinecode" />
+            <Content>
+                <h1>Collaborate with people</h1>
+                <p>Bring your team together and build your community by using our cross-platform application</p>
+            </Content>
+        </Wrapper>
+
 
     );
 }
+
+const Wrapper = styled.div`
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 16px;
+    color: black;
+    position: relative;
+
+    .spline{
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: 0;
+    }
+`;
+
+const Content = styled.div`
+
+`
